@@ -4,7 +4,13 @@
       <a class="navbar-brand" href="#">iPark</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#"> <%= link_to 'Sign In', new_user_session_path %> </a></li>
+      <li><a href="#">
+        <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to 'Sign In', new_user_session_path %>
+        <% end %>
+      </a></li>
     </ul>
     <ul class="nav navbar-nav">
       <li><a href="#"> <%= link_to 'Sign Up', new_user_registration_path %> </a></li>
