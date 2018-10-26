@@ -1,8 +1,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">iPark</a>
+    <div class="navbar-header mr-auto">
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo.jpg", :size => '50x50' %>
+      </a>
     </div>
+    <div class="ml-auto p-2">
     <ul class="nav navbar-nav">
       <li><a href="#">
         <% if user_signed_in? %>
@@ -13,7 +16,10 @@
       </a></li>
     </ul>
     <ul class="nav navbar-nav">
-      <li><a href="#"> <%= link_to 'Sign Up', new_user_registration_path %> </a></li>
+        <% unless user_signed_in? %>
+        <li><a href="#"> <%= link_to 'Sign Up', new_user_registration_path %> </a></li>
+        <% end %>
     </ul>
+  </div>
   </div>
 </nav>

@@ -31,6 +31,8 @@ gem 'devise', '~> 4.5'
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'modernizr-rails'
+gem "rails-boilerplate"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

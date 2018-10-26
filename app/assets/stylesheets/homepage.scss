@@ -9,19 +9,21 @@ $color: #04265b;
 
 
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: $color; /*Sets the text hover color on navbar*/
-}
+// .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+//     color: $color; /*Sets the text hover color on navbar*/
+// }
+//
+// .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
+//         a:hover, .navbar-default .navbar-nav > .active > a:focus {
+//     color: $color; /*BACKGROUND color for active*/
+//     background-color: #030033;
+// }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
-        a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: $color; /*BACKGROUND color for active*/
-    background-color: #030033;
-}
-
-.navbar-default {
-    background-color: #0f006f;
-    border-color: #030033;
+.img-responsive {
+   height: auto;
+   width: auto;
+   max-height: 20px !important;
+   max-width: 20px !important;
 }
 
 .dropdown-menu > li > a:hover,
@@ -39,8 +41,14 @@ $color: #04265b;
 
 .navbar-default .navbar-nav > li > a {
     color: $color !important; /*Change active text color here*/
-    font-size: 24px;
+    font-size: 18px;
     font-family: $font;
+    border-left: 1px solid $color;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 
 }
