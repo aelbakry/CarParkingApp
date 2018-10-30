@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parkingRef: 
+  name: MyString
+  location: MyString
+  address: MyText
+  postcode: MyString
+  cost: 1.5
+  telephone: MyString
+  notes: MyText
+
+two:
+  parkingRef: 
+  name: MyString
+  location: MyString
+  address: MyText
+  postcode: MyString
+  cost: 1.5
+  telephone: MyString
+  notes: MyText

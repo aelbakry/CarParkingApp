@@ -15,10 +15,5 @@ class ApplicationController < ActionController::Base
 
         end
 
-  # def home
-  # end
-  #
-  # def display
-  # end
 
 end

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 		root to: 'homepage#home'
 
-    get '/account/display/:id', to: 'account#display', as: 'account_display'
+    #TBC change get route to be shorter
+    get 'display/:id', to: 'account#display', as: 'account_display'
     # get '/account/overview', to: 'account#display', as: 'account_display'
 
 
