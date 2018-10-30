@@ -1,1 +1,10 @@
-<%= yield %>
+Message below have been submitted successfully!
+===============================================
+
+<%= @message  %>.
+
+To login to the site, just follow this link: <%= @url %>.
+
+Sender Details:  <%= @user.forename %>  , <%= @user.surname %>, <%= @user.email %>
+
+We will reply shortly :)

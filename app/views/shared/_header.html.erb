@@ -6,6 +6,13 @@
       </a>
     </div>
     <div class="ml-auto p-2">
+
+      <ul class="nav navbar-nav">
+          <li><a href="#">
+            <%= link_to 'Contact Us', contact_path %>
+            </a></li>
+      </ul>
+
     <ul class="nav navbar-nav">
       <li><a href="#">
         <% if user_signed_in? %>
@@ -25,6 +32,8 @@
           <% end %>
           </a></li>
     </ul>
+
+
   </div>
   </div>
 </nav>

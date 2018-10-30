@@ -29,5 +29,26 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
 en:
-  hello: "Hello world"
+  gmail_username: 'aelbakry1999@gmail.com'
+  gmail_password: 'tsepclejsljdawlu'
+
+
+
+  contact:
+    title: Contact us
+    contact_us: Complete the following form to get in touch with us!
+    name: "Name:"
+    enter_name: Enter your name
+    email: "Email:"
+    enter_email: Enter your email address
+    telephone: "Telephone:"
+    enter_telephone: Enter your telephone number
+    message: "Message:"
+    enter_message: What do you want to say?
+    submit: Contact Us
+
+  request_contact:
+    no_email: You must supply an email address
+    email_sent: Thank you. We will be in touch short

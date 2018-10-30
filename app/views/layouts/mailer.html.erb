@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
-
   <body>
-    <%= yield %>
+    <h1>Message below have been submitted successfully! </h1>
+    <p>
+       <%= @message %>.<br>
+    </p>
+    <p>
+      Sender Details:  <%= @user.forename %>  , <%= @user.surname %>, <%= @user.email %>.
+    </p>
+    <p>We will reply shortly :)</p>
   </body>
 </html>

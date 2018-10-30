@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="homepage.scss">
+= render "shared/header"
+
+%h1= t('contact.title')
+%p= t('contact.contact_us')
+
+
+
+= form_tag request_contact_path, method: 'post' do
+  = label_tag :name, t('.name')
+  = text_field_tag :name, '', title: t('.enter_name'), size: 50
+
+  = label_tag :email, t('.email')
+  = email_field_tag :email, '', title: t('.enter_email')
+
+  = label_tag :telephone, t('.telephone')
+  = telephone_field_tag :telephone, '', title: t('.enter_telephone')
+
+  = label_tag :message, t('.message')
+  = text_field_tag :message, '', title: t('.enter_message'), size: 100
+
+  = submit_tag  t('contact.submit')

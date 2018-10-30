@@ -32,6 +32,10 @@ gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'modernizr-rails'
 gem "rails-boilerplate"
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
+gem "figaro"
+
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
