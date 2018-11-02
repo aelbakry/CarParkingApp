@@ -1,6 +1,7 @@
 class CreateParkings < ActiveRecord::Migration[5.2]
   def change
-    create_table :parkings do |t|
+    create_table :parkings, id: false do |t|
+
       t.integer :parkingRef
       t.string :name
       t.string :location
@@ -10,7 +11,6 @@ class CreateParkings < ActiveRecord::Migration[5.2]
       t.string :telephone
       t.text :notes
 
-      t.timestamps
     end
   end
 end

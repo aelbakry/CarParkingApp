@@ -34,6 +34,9 @@ gem 'modernizr-rails'
 gem "rails-boilerplate"
 gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
 gem "figaro"
+gem 'mysql2', '~> 0.5.2'
+gem 'yaml_db'
+
 
 
 

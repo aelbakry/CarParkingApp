@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_151454) do
+ActiveRecord::Schema.define(version: 2018_10_27_170325) do
+
+  create_table "parkings", id: false, force: :cascade do |t|
+    t.integer "parkingRef"
+    t.string "name"
+    t.string "location"
+    t.text "address"
+    t.string "postcode"
+    t.float "cost"
+    t.string "telephone"
+    t.text "notes"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'parking/search'
   get 'contact/show_form'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
     get 'display/:id', to: 'account#display', as: 'account_display'
 
 
+    get 'parking/search', to: 'parking#search', as: 'search_page'
 
     get 'show_form', to: 'contact#show_form', as: 'contact'
     post 'request_contact', to: 'contact#request_contact'

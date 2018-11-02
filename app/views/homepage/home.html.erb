@@ -6,17 +6,19 @@
 <%= render "shared/header" %>
 
 
-<div class="active-purple-4 mb-4">
-<input class="form-control" type="text" placeholder="Where are you looking for available parking slots?" aria-label="Search">
-</div>
+<%= form_tag(search_page_path, :method => "get",
+    class: 'navbar-form navbar-left') do %>
+  <div class="input-group">
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>
+    <div class="input-group-btn">
+      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+    </div>
+  </div>
+<% end %>
 
 <body>
 
-    <div class="bg">
-
-   <%= image_tag "img1.jpeg" %>
-
-    </div>
+    
 
 
 </body>
