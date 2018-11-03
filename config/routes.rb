@@ -7,9 +7,12 @@ Rails.application.routes.draw do
 
     #TBC change get route to be shorter
     get 'display/:id', to: 'account#display', as: 'account_display'
+    get 'parking/book/:parkingRef', to: 'parking#book', as: 'book'
+
 
 
     get 'parking/search', to: 'parking#search', as: 'search_page'
+
 
     get 'show_form', to: 'contact#show_form', as: 'contact'
     post 'request_contact', to: 'contact#request_contact'

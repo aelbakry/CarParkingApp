@@ -1,6 +1,6 @@
 class CreateParkings < ActiveRecord::Migration[5.2]
   def change
-    create_table :parkings, id: false do |t|
+    create_table :parkings, :primary_key => :parkingRef , id: false do |t|
 
       t.integer :parkingRef
       t.string :name
@@ -14,3 +14,6 @@ class CreateParkings < ActiveRecord::Migration[5.2]
     end
   end
 end
+
+
+# create_table :parkings, :primary_key => :parkingRef, id: false do |t|

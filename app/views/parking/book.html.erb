@@ -3,16 +3,18 @@
 
 <%= render "shared/header" %>
 
-
 <div class="bg">
-  <% @results.each do |result| %>
-  <%= link_to book_path(result.parkingRef) do %>
-  <h2> <%= result.parkingRef %>  <%= result.name %> </h2>
-  <h3> <%= result.location %> </h3>
-  <h4> <%= result.postcode %> </h4>
-  <% end %>
-  <br>
-  <br>
-  <br>
-<% end %>
+
+
+  <h4> <%= @parking.parkingRef %> <br>
+       <%= @parking.name %> <br>
+       <%= @parking.address %> <br>
+       <%= @parking.location %> <br>
+       <%= @parking.postcode %> <br>
+       <%= @parking.telephone %> <br>
+       <%= @parking.cost %> <br>
+   </h4>
+    <b> <%= @parking.notes %> <br> </b>
+
+
 </div>

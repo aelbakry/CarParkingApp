@@ -7,4 +7,8 @@ class ParkingController < ApplicationController
       @results = Parking.all.where("lower(location) LIKE :search", search: @parameter)
     end
   end
+
+  def book
+    @parking = Parking.find(params[:parkingRef])
+  end
 end
