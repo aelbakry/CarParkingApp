@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :bookings
+  resources :parkings
+
   get 'parking/search'
   get 'contact/show_form'
   devise_for :users
@@ -7,7 +10,9 @@ Rails.application.routes.draw do
 
     #TBC change get route to be shorter
     get 'display/:id', to: 'account#display', as: 'account_display'
-    get 'parking/book/:parkingRef', to: 'parking#book', as: 'book'
+    get 'parking/book/:parkingRef/parkings', to: 'parking#book', as: 'book'
+
+
 
 
 

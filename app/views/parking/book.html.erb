@@ -15,6 +15,6 @@
        <%= @parking.cost %> <br>
    </h4>
     <b> <%= @parking.notes %> <br> </b>
-
+        <%= link_to "Book Now!", new_booking_path( @parking.parkingRef ) %>
 
 </div>

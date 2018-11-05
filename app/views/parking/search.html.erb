@@ -6,7 +6,7 @@
 
 <div class="bg">
   <% @results.each do |result| %>
-  <%= link_to book_path(result.parkingRef) do %>
+  <%= link_to book_path( result.parkingRef ) do %>
   <h2> <%= result.parkingRef %>  <%= result.name %> </h2>
   <h3> <%= result.location %> </h3>
   <h4> <%= result.postcode %> </h4>
