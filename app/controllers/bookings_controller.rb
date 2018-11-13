@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /bookings
   # GET /bookings.json
   def index
@@ -15,7 +17,7 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   def new
     @booking = Booking.new
-    @parking = Parking.find(params[:parkingRef])
+
   end
 
   # GET /bookings/1/edit
@@ -25,9 +27,11 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
-    @booking = Booking.new(booking_params)
-    @booking.user_id = 1
-    @booking.parkingRef = @parking.parkingRef
+    @user = User.find(params[:user_id])
+    parking = Parking.find(params[:parking_id])
+    @booking = @user.bookings.build(parking: parking, user: @user)
+
+
 
     respond_to do |format|
       if @booking.save

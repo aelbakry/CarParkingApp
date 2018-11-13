@@ -4,8 +4,8 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.belongs_to :user, index: true, foreign_key: true
       t.belongs_to :parking, index: true, foreign_key: true
 
-      t.dateime :date
 
+      t.date
       t.timestamps
     end
   end

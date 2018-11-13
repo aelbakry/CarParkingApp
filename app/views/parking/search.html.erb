@@ -1,18 +1,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="homepage.scss">
+<link rel="stylesheet" href="parkings.scss">
+
 
 <%= render "shared/header" %>
-
-
-<div class="bg">
-  <% @results.each do |result| %>
-  <%= link_to book_path( result.parkingRef ) do %>
-  <h2> <%= result.parkingRef %>  <%= result.name %> </h2>
-  <h3> <%= result.location %> </h3>
-  <h4> <%= result.postcode %> </h4>
-  <% end %>
-  <br>
-  <br>
-  <br>
+<div class="card-columns">
+<% @results.each do |result| %>
+<div class="card" >
+  <span class="label label-primary"> <%= result.empty_spaces %></span>
+  <div class="card-body">
+    <h5 class="card-title"> <%= result.name %> </h5>
+    <p class="card-text"> <%= result.location %> <%= result.postcode %> </p>
+    <div class="btn btn-primary" >  <%=  link_to 'View', book_path( result.id ) %> </div>
+  </div>
+</div>
 <% end %>
 </div>

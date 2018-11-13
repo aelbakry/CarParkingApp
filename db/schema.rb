@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_021307) do
+ActiveRecord::Schema.define(version: 2018_11_13_162513) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_021307) do
     t.float "cost"
     t.string "telephone"
     t.text "notes"
+    t.integer "empty_spaces"
   end
 
   create_table "users", force: :cascade do |t|

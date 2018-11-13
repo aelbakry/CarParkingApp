@@ -1,4 +1,6 @@
 class ParkingController < ApplicationController
+
+
   def search
     if params[:search].blank?
       redirect_to(root_path, alert: "Empty field!") and return
@@ -9,6 +11,9 @@ class ParkingController < ApplicationController
   end
 
   def book
-    @parking = Parking.find(params[:parkingRef])
+    @parking = Parking.find(params[:id])
   end
+
+
+
 end

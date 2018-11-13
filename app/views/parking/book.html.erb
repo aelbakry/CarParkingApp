@@ -6,7 +6,7 @@
 <div class="bg">
 
 
-  <h4> <%= @parking.parkingRef %> <br>
+  <h4> <%= @parking.id %> <br>
        <%= @parking.name %> <br>
        <%= @parking.address %> <br>
        <%= @parking.location %> <br>
@@ -15,6 +15,7 @@
        <%= @parking.cost %> <br>
    </h4>
     <b> <%= @parking.notes %> <br> </b>
-        <%= link_to "Book Now!", new_booking_path( @parking.parkingRef ) %>
+        <%= @currentUser = current_user %>
+        <%= button_to "Book Now!", bookings_path(parking_id: @parking, user_id: @currentUser) %>
 
 </div>

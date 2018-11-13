@@ -1,3 +1,49 @@
 // Place all the styles related to the Parkings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$color_background: #B1E82A;
+$color_text: #EBF9D6;
+
+
+
+.card-columns {
+
+    column-count: 3;
+    margin-right: 30dp;
+
+    .card {
+      max-width: 200px;
+       margin: 30px;
+       padding: 20px;
+
+
+       .card-body{
+         margin: 10px;
+       }
+
+       .label-primary{
+         margin: auto;
+         width: auto;
+         height: 50px;
+         padding: 10px;
+         font-size: 30px;
+         color: $color_text;
+         background-color: $color_background;
+
+       }
+
+       .btn-primary{
+
+         height: 20px;
+         width: 50px;
+         color: #2FD3A3;
+         background-color: white;
+       }
+
+
+    }
+
+}
