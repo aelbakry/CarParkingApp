@@ -6,8 +6,10 @@
         - @booking.errors.full_messages.each do |message|
           %li= message
 
+
   .field
     = f.label :date
     = f.datetime_select :date
+
   .actions
     = f.submit 'Save'

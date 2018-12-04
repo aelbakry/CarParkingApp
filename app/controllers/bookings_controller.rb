@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [ :create]
+  before_action :set_parking, only: [ :new, :create]
+
+
+
 
 
 
@@ -27,9 +32,11 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
-    @user = User.find(params[:user_id])
-    parking = Parking.find(params[:parking_id])
-    @booking = @user.bookings.build(parking: parking, user: @user)
+    # @user = User.find(params[:user_id])
+    # parking = Parking.find(params[:parking_id])
+    # @booking = @user.bookings.build(parking: parking, user: @user)
+    @booking = @user.bookings.build(parking: @parking)
+    @booking.update(booking_params)
 
 
 
@@ -70,9 +77,23 @@ class BookingsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = current_user
+    end
+
+    def set_parking
+      @parking = Parking.find(session[:parking_id])
+    rescue ActiveRecord::RecordNotFound
+      session[:parking_id] = params[:parking_id]
+      @parking = Parking.find(session[:parking_id])
+
+    end
+
     def set_booking
       @booking = Booking.find(params[:id])
     end
+
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params

@@ -1,3 +1,71 @@
 // Place all the styles related to the bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$color_background: #B1E82A;
+$color_bg: #E3EDFF;
+$color_text: #EBF9D6;
+$font: 'Lato', sans-serif;
+
+
+
+// .card-columns {
+//     column-count: 1;
+//     background-position: center;
+//
+//     .card {
+//       max-width: 300px;
+//       margin: 30px;
+//       padding: 20px;
+//       background-color: $color_bg;
+//       border-radius: 15px;
+//
+//       .card-body{
+//         font-family: $font;
+//         margin: 20px;
+//
+//         .card-title{
+//           font-size: 20px;
+//           font-family: $font;
+//         }
+//         .card-text{
+//           font-size: 15px;
+//           font-family: $font;
+//
+//         }
+//        }
+//
+//        .label-primary{
+//          margin: 5px;
+//          margin-right: -5px;
+//          width: auto;
+//          height: 50px;
+//          padding: 10px;
+//          font-size: 30px;
+//          color: $color_text;
+//          background-color: $color_background;
+//        }
+//
+//        .label-secondary{
+//          margin: 5px;
+//          width: auto;
+//          height: 50px;
+//          padding: 10px;
+//          font-size: 18px;
+//          color: $color_background;
+//          background-color: $color_bg;
+//
+//        }
+
+       .btn-book{
+         margin: 10px;
+         padding: 10px;
+         font-size: 18px;
+         color: $color_background;
+         border-radius: 30px;
+       }
+//     }
+//
+// }

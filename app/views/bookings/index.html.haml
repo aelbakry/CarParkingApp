@@ -13,8 +13,8 @@
   %tbody
     - @bookings.each do |booking|
       %tr
-        %td= booking.belongs_to
-        %td= booking.belongs_to
+        %td= booking.user_id
+        %td= booking.parking_id
         %td= booking.date
         %td= link_to 'Show', booking
         %td= link_to 'Edit', edit_booking_path(booking)
