@@ -5,7 +5,7 @@
 @import "bootstrap";
 
 $font: 'Lato', sans-serif;
-$color: #04265b;
+$color: #fffdd0;
 
 cards  {
     color: green;
@@ -32,6 +32,13 @@ cards  {
    max-width: 20px !important;
 }
 
+body {
+  background: image-url('background_homepage.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
 
 .dropdown-menu > li > a:hover,
@@ -41,22 +48,26 @@ cards  {
     background-color: #66CCFF; /*change color of links in drop down here*/
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-    text-decoration: none;
-    background-color: silver; /*Change rollover cell color here*/
+.input-group{
+  width: 600px !important;
+  vertical-align: top;
+  margin-top: 20px;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: $color !important; /*Change active text color here*/
-    font-size: 18px;
-    font-family: $font;
-    border-left: 1px solid $color;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+.navbar-default {
+    background-color: #05434A !important;
+    border-color: #05434A !important;
 
+    .navbar-nav > li > a {
+      color: $color !important; /*Change active text color here*/
+      font-size: 18px;
+      font-family: $font;
+      border-left: 1px solid $color;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+ }
 
 }
