@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<%= render "shared/header" %>
+
+<h1>Listing bookings</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Belongs to</th>
+      <th>Belongs to</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td>
+          <%= booking.user_id %>
+        </td>
+        <td>
+          <%= booking.parking_id %>
+        </td>
+        <td>
+          <%= booking.date %>
+        </td>
+        <td>
+          <%= link_to 'Show', booking %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_booking_path(booking) %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br/>
+<%= link_to 'New Booking', new_booking_path %>

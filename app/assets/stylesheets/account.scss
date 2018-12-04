@@ -1,3 +1,36 @@
 // Place all the styles related to the account controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$color_background: #FFFEEACC;
+$color_border: #FFFEEA;
+$color_btn: #FFDF00AB;
+$font: 'Lato', sans-serif;
+
+
+.container{
+  background-color: $color_background;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px;
+  border-color: $color_border;
+  font-family: $font !important;
+}
+
+.btn-edit-account{
+  background-color: $color_btn;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px !important;
+  font-size: 18px !important;
+  font-family: $font !important;
+
+
+
+}

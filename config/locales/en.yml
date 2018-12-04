@@ -34,6 +34,21 @@ en:
   gmail_username: 'aelbakry1999@gmail.com'
   gmail_password: 'tsepclejsljdawlu'
 
+  user:
+    forename: Forename
+    surname: Surname
+    email: E-mail
+    dob: Date of Birth
+
+
+  parking:
+    name: Parking Name
+    addres: Address
+    city: City
+    postcode: Postcode
+    cost: Cost per hour
+    notes: Additional Info.
+
 
 
   contact:

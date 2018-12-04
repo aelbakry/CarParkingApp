@@ -2,14 +2,44 @@
 <link rel="stylesheet" href="account.scss">
 <%= render "shared/header" %>
 
+<div class="bg">
 
-<h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= t('user.forename') %>
+      </div>
+      <div class="col-sm">
+        <%= @myuser.forename %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <%= t('user.surname') %>
+      </div>
+      <div class="col-sm">
+        <%= @myuser.surname %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <%= t('user.email') %>
+      </div>
+      <div class="col-sm">
+        <%= @myuser.email %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <%= t('user.dob') %>
+      </div>
+      <div class="col-sm">
+        <%= @myuser.date_of_birth %>
+      </div>
+    </div>
+  </div>
+      <div class="offset-5">
+        <%= link_to 'Edit Account', edit_user_registration_path, :class => "btn btn-edit-account" %>
+      </div>
 
-<%= @myuser.forename %> <br/>
-<%= @myuser.surname %> <br/>
-<%= @myuser.email %> <br/>
-<%= link_to 'Edit Account', edit_user_registration_path %>
-
-
-
-</h1>
+</div>
