@@ -1,17 +1,12 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [ :create]
+  before_action :set_user, only: [ :create, :index]
   before_action :set_parking, only: [ :new, :create]
-
-
-
-
-
 
   # GET /bookings
   # GET /bookings.json
   def index
-    @bookings = Booking.all
+    @bookings = Booking.user(@user.id)
   end
 
   # GET /bookings/1
@@ -92,7 +87,6 @@ class BookingsController < ApplicationController
     def set_booking
       @booking = Booking.find(params[:id])
     end
-
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
