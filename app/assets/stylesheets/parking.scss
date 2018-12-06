@@ -1,8 +1,7 @@
 // Place all the styles related to the Parking controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 $color_background: #FFFEEACC;
 $color_btn: #175B00AA;
@@ -19,8 +18,4 @@ $color_btn: #175B00AA;
   background-color: $color_btn;
   width: 200px;
   text-align: center;
-
-
-
-
 }

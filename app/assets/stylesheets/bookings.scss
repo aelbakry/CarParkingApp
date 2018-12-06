@@ -1,13 +1,23 @@
 // Place all the styles related to the bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 $color_background: #B1E82A;
 $color_bg: #E3EDFF;
 $color_text: #EBF9D6;
-$font: 'Lato', sans-serif;
+$font: 'Lato', sans-serif;$color_background: #FFFEEACC;
+$color_btn: #175B00AA;
+
+.container{
+  background-color: $color_background;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+
 
 
 

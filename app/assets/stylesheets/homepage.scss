@@ -1,8 +1,6 @@
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
 $font: 'Lato', sans-serif;
 $color: #fffdd0;
@@ -41,12 +39,7 @@ body {
 }
 
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-    color: $color;
-    text-decoration: none;
-    background-color: #66CCFF; /*change color of links in drop down here*/
-}
+
 
 .input-group{
   width: 600px !important;
@@ -59,9 +52,34 @@ body {
     background-color: #05434A !important;
     border-color: #05434A !important;
 
-    .navbar-nav > li > a {
+    .dropdown-toggle{
+      background-color: #05434A !important;
+      border-color: #05434A !important;
+    }
+
+    .dropdown-menu{
+
+      background-color: #05434A !important;
+      border-color: #05434A !important;
+
+
+    }
+
+    .dropdown-item{
+      background-color: #05434A !important;
+      border-color: #05434A !important;
+      width: 150px;
+      font-size: 18px;
+      color: $color !important; /*Change active text color here*/
+
+
+
+    }
+
+    .navbar-nav {
       color: $color !important; /*Change active text color here*/
       font-size: 18px;
+      background-color: #05434A !important;
       font-family: $font;
       border-left: 1px solid $color;
       text-align: center;
@@ -69,11 +87,14 @@ body {
       padding-bottom: 5px;
       padding-left: 10px;
       padding-right: 10px;
+    }
 
-    
+    .dropdown .btn-secondary  {
+      background-color: $color;
+      text-decoration: none;
+      width: 100px;
+    }
 
 
 
-  }
-
-}
+    }

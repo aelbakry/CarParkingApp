@@ -34,6 +34,13 @@ en:
   gmail_username: 'aelbakry1999@gmail.com'
   gmail_password: 'tsepclejsljdawlu'
 
+  header:
+    account: Account Overview
+    profile: Profile
+    logout: Log out
+    signin: Sign in
+    signup: Sign up
+
   user:
     forename: Forename
     surname: Surname
