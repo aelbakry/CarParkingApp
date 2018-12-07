@@ -1,3 +1,72 @@
 // Place all the styles related to the Contact controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$color_bg: #FFFEEABB;
+$color_text: #EBF9D6;
+$font: 'Lato', sans-serif;
+$color_background: #898A64AA;
+$color_background2: #898A64CC;
+$color_btn: #3A0A55AA;
+$color_msg: #0F031699;
+
+
+
+.container-main{
+  background-color: $color_bg;
+  border-radius: 20px;
+  margin: 100px;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.container-message{
+  background-color: $color_msg;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.container-body{
+  background-color: $color_background;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 16px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.container-title{
+  background-color: $color_background2;
+  border-radius: 20px;
+  margin: 100px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.btn-contact{
+  background-color: $color_btn;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px !important;
+  margin-left: 30px;
+
+
+}

@@ -34,12 +34,20 @@ en:
   gmail_username: 'aelbakry1999@gmail.com'
   gmail_password: 'tsepclejsljdawlu'
 
+  booking:
+    id: Booking Reference
+    date: Booking Date
+
+
+
+
   header:
     account: Account Overview
     profile: Profile
     logout: Log out
     signin: Sign in
     signup: Sign up
+    bookings: My Bookings
 
   user:
     forename: Forename

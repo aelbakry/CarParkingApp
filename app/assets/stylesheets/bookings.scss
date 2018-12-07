@@ -3,21 +3,88 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$color_background: #B1E82A;
-$color_bg: #E3EDFF;
+$color_bg: #5897BDAB;
 $color_text: #EBF9D6;
 $font: 'Lato', sans-serif;$color_background: #FFFEEACC;
-$color_btn: #175B00AA;
+$btn_green: #58BD86AA;
+$btn_yellow: #175B00AA;
+$btn_red: #F03300AA;
 
-.container{
+.bg{
+  margin: 150px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.container-data{
   background-color: $color_background;
-  border-radius: 30px;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 20px;
+  font-size: 16px;
+
+}
+
+.container-background{
+
+  background-color: $color_background;
+  border-radius: 20px;
+  margin: 20px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+
+}
+
+.container-title{
+  background-color: $color_bg;
+  border-radius: 20px;
   margin: 20px;
   padding: 20px;
   font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.container-buttons{
+  margin: 10px;
+  padding: 20px;
+
+}
+
+.btn-show{
+  background-color: $btn_green;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px !important;
+  margin-left: 30px;
 }
 
 
+.btn-delete{
+  background-color: $btn_red;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px !important;
+  margin-left: 30px;
+
+
+}
+
+
+.btn-edit{
+  background-color: $btn_yellow;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px !important;
+  margin-left: 30px;
+
+
+}
 
 
 

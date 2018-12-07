@@ -1,0 +1,36 @@
+$color_bg: #FFD70099;
+$color_text: #EBF9D6;
+$font: 'Lato', sans-serif;
+$color_background: #58BD86AA;
+$color_btn: #3A0A55AA;
+$color_msg: #0F031699;
+$btn_green: #58BD86AA;
+
+
+
+
+.container-signup{
+  background-color: $color_background;
+  border-radius: 20px;
+  margin: 100px;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}
+
+.container-signin{
+  background-color: $color_bg;
+  border-radius: 20px;
+  margin: 100px;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 18px;
+  color: $color_text !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1020;
+}

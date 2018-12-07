@@ -32,12 +32,18 @@
       </a>
 
       <a>
+        <%= link_to t('header.bookings'), bookings_path, :class => "dropdown-item" %>
+      </a>
+
+      <a>
         <% if user_signed_in? %>
         <%= link_to t('header.logout'), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
         <% else %>
-        <%= link_to t('header.signin'), new_user_session_path %>
+        <%= link_to t('header.signin'), new_user_session_path, :class => "dropdown-item" %>
         <% end %>
-     </a>
+      </a>
+
+
 
     </div>
   </div>
