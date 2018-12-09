@@ -9,6 +9,45 @@ $font: 'Lato', sans-serif;$color_background: #FFFEEACC;
 $btn_green: #58BD86AA;
 $btn_yellow: #175B00AA;
 $btn_red: #F03300AA;
+$color_date: #870C3399;
+
+.ui-datepicker {
+  width: 216px !important;
+  height: auto !important;
+  margin: 5px auto 0 !important;
+  font: 9pt Arial, sans-serif !important;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5) !important;
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5) !important;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5) !important;
+}
+
+.ui-datepicker-header {
+  color: #e0e0e0 !important;
+  font-weight: bold !important;
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, 2) !important;
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2) !important;
+  box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2) !important;
+  text-shadow: 1px -1px 0px #000 !important;
+  filter: dropshadow(color=#000, offx=1, offy=-1) !important;
+  line-height: 30px !important;
+  border-width: 1px 0 0 0 !important;
+  border-style: solid !important;
+  border-color: #111 !important;
+}
+
+
+
+.container-date{
+
+  background-color: $color_date;
+  border-radius: 20px;
+  margin: 20px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+
+}
 
 .bg{
   margin: 150px;

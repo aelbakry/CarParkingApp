@@ -4,10 +4,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$color_background: #B1E82A;
+$color_background: #1E852CAA;
 $color_bg: #FFFEEACC;
 $color_text: #EBF9D6;
 $font: 'Lato', sans-serif;
+$color_background2: #E42E6899;
 
 
 
@@ -25,6 +26,12 @@ $font: 'Lato', sans-serif;
       .card-body{
         font-family: $font;
         margin: 20px;
+        background-color: #00000099;
+        border-radius: 15px;
+        color: $color_text;
+        margin-bottom: 0px;
+
+
 
         .card-title{
           font-size: 20px;
@@ -46,6 +53,8 @@ $font: 'Lato', sans-serif;
          font-size: 30px;
          color: $color_text;
          background-color: $color_background;
+         border-radius: 100px;
+
        }
 
        .label-secondary{
@@ -54,8 +63,9 @@ $font: 'Lato', sans-serif;
          height: 50px;
          padding: 10px;
          font-size: 18px;
-         color: $color_background;
-         background-color: $color_bg;
+         color: $color_text;
+         background-color: $color_background;
+         border-radius: 100px;
 
        }
 

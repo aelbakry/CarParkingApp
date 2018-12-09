@@ -1,23 +1,59 @@
-<%= form_for @booking do |f| %>
-  <% if @booking.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= "#{pluralize(@booking.errors.count, "error")} prohibited this booking from being saved:" %>
-      </h2>
-      <ul>
-        <% @booking.errors.full_messages.each do |message| %>
-          <li>
-            <%= message %>
-          </li>
-        <% end %>
-      </ul>
+
+<link rel="stylesheet" href="bookings.scss">
+
+<div class="container-m">
+  <div class="col-md-6">
+
+    <div class="container-data">
+
+
+      <div class="col-sm">
+        <%= @parking.id %>
+      </div>
+
+      <div class="col-sm">
+        <%= @parking.name %>
+      </div>
+
+      <div class="col-sm">
+        <%= @parking.postcode %>
+      </div>
+
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.datetime_select :date %>
+
   </div>
-  <div class="actions">
-    <%= f.submit 'Save' %>
+
+  <div class="col-md-6">
+
+    <div class="container-date">
+
+      <%= form_for @booking do |f| %>
+        <% if @booking.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <%= "#{pluralize(@booking.errors.count, "error")} prohibited this booking from being saved:" %>
+            </h2>
+            <ul>
+              <% @booking.errors.full_messages.each do |message| %>
+                <li>
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :date %>
+          <%= f.text_field :date %>
+        </div>
+        <div class="actions">
+          <%= f.submit 'Save' %>
+        </div>
+      <% end %>
+    </div>
+
+
   </div>
-<% end %>
+
+</div>
