@@ -18,3 +18,36 @@
 //= require_tree .
 
 $('.dropdown-toggle').dropdown()
+
+$(document).ready(function() {
+  
+  $("#search_button").click(function() {
+    var $search = $('#search_text').val().trim();
+    if (!$search.length){
+      alert('Please enter where you want to park today.');
+     $("#fade").fadeOut("slow");
+    }
+  });
+
+  $("#contact_button").click(function() {
+    var $name = $('#name_field').val().trim();
+    var $email = $('#name_field').val().trim();
+    var $telephone = $('#name_field').val().trim();
+
+    if ((!$name.length || !$email.length || !$telephone.length) == 0){
+
+      alert('Please check that all fields are filled!');
+
+    }
+
+  });
+
+
+  $("#book_button").click(function() {
+    var $today = new Date();
+    $today.setHours(0,0,0,0);
+    var $search = $('#booking_date').datepicker('getDate')
+    if ($search < $today)
+        alert('How are you today?');
+  });
+});

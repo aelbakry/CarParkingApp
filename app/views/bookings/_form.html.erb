@@ -45,10 +45,10 @@
 
         <div class="field">
           <%= f.label :date %>
-          <%= f.text_field :date %>
+          <%= f.date_field :date, :id => "booking_date"%>
         </div>
         <div class="actions">
-          <%= f.submit 'Save' %>
+          <%= f.submit 'Save', :id => "book_button" %>
         </div>
       <% end %>
     </div>

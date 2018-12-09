@@ -1,8 +1,14 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <%= render 'shared/header' %>
-<p id="notice">
-  <%= notice %>
-</p>
+
+<div class ="container">
+  <p id="notice">
+    <%= notice %>
+  </p>
+</div>
+
+<div class="container-background">
+
 <p>
   <b>Belongs to:</b>
   <%= @booking.user_id %>
@@ -12,5 +18,6 @@
   <%= @booking.date %>
 </p>
 <%= link_to 'Edit', edit_booking_path(@booking) %>
-\|
 <%= link_to 'Back', bookings_path %>
+
+</div>
