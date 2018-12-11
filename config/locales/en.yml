@@ -48,6 +48,7 @@ en:
     signin: Sign in
     signup: Sign up
     bookings: My Bookings
+    contact: Contact us
 
   user:
     forename: Forename

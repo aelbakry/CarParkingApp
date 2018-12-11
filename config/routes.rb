@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 		root to: 'homepage#home'
 
-    #TBC change get route to be shorter
     get 'display/users/:id', to: 'account#display', as: 'account_display'
-    get 'parking/book/:id/parkings', to: 'parking#book', as: 'book'
-    get 'parking/search', to: 'parking#search', as: 'search_page'
+    get 'parking/search/:id/parkings', to: 'parking#book', as: 'book'
     get 'show_form', to: 'contact#show_form', as: 'contact'
+    get 'bookings/show', to: 'bookings#show'
+    get 'bookings/edit', to: 'bookings#edit'
+    patch 'bookings/update', to: 'bookings#update'
+
 
 
 

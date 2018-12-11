@@ -7,16 +7,23 @@
     </div>
     <div class="ml-auto p-2">
 
-            <%= link_to 'Contact Us', contact_path, :class => "navbar-nav" %>
+           <%= link_to t('header.contact'), contact_path, :class => "navbar-nav" %>
+
    </div>
+
+   <div>
+     <% unless user_signed_in? %>
+<%= link_to t('header.signup'), new_user_registration_path , :class => "navbar-nav" %>
+<% end %>
+
+</div>
+
 
   <div class="dropdown">
 
     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-            <% unless user_signed_in? %>
-            <%= link_to t('header.signup'), new_user_registration_path , :class => "navbar-nav" %>
-            <% else %>
+            <% if user_signed_in? %>
             <% @myuser = current_user %>
             <%= link_to t('header.account'), account_display_path(@myuser.id), :class => "navbar-nav"  %>
             <% end %>
@@ -28,21 +35,13 @@
         <% if user_signed_in? %>
         <% @myuser = current_user %>
         <%= link_to t('header.profile'), account_display_path(@myuser.id), :class => "dropdown-item" %>
-        <% end %>
-      </a>
-
-      <a>
         <%= link_to t('header.bookings'), bookings_path, :class => "dropdown-item" %>
-      </a>
-
-      <a>
-        <% if user_signed_in? %>
         <%= link_to t('header.logout'), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
         <% else %>
         <%= link_to t('header.signin'), new_user_session_path, :class => "dropdown-item" %>
         <% end %>
-      </a>
 
+      </a>
 
 
     </div>

@@ -3,17 +3,17 @@
 <%= render "shared/header" %>
 
 <div class="card-columns">
-<% @results.each do |result| %>
+<% @parkings.each do |parking| %>
 <div class="card" >
   <div>
-  <span class="label label-primary"> <%= result.empty_spaces %></span>
+  <span class="label label-primary"> <%= parking.empty_spaces %></span>
   <span class="label label-secondary"> available slots...</span>
   </div>
   <div class="card-body">
-    <span class="card-title"> <%= result.name %> </span> <br>
-    <span class="card-text"> <%= result.location %> </span> <br>
-    <span class="card-text"> <%= result.postcode %> </span> <br>
-    <span class="offset-3"> <%=  link_to 'View', book_path( result.id ) , :class => "btn btn-info" %> </span>
+    <span class="card-title"> <%= parking.name %> </span> <br>
+    <span class="card-text"> <%= parking.location %> </span> <br>
+    <span class="card-text"> <%= parking.postcode %> </span> <br>
+    <span class="offset-3"> <%=  link_to 'View', book_path( parking.id ) , :class => "btn btn-info" %> </span>
   </div>
 </div>
 <% end %>

@@ -1,39 +1,43 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [ :create, :index]
-  before_action :set_parking, only: [ :new, :create]
+  before_action :set_parking, only: [ :show, :edit, :update, :destroy]
 
+
+  # Index method responsible for displaying bookings related to the current user
   # GET /bookings
-  # GET /bookings.json
   def index
     @bookings = Booking.user(@user.id)
   end
 
+  # Show method responsible for displaying the booking selelcted
   # GET /bookings/1
-  # GET /bookings/1.json
   def show
   end
 
+  # New method responsbile for creating a new booking obect
+  # and setting the session for this booking
   # GET /bookings/new
   def new
     @booking = Booking.new
-
+    session[:booking_id] = params[:booking_id]
+    @parking = Parking.find(session[:parking_id])
   end
 
+  # New method responsbile for editing a booking obect
   # GET /bookings/1/edit
   def edit
   end
 
+  # Create method responsbile to create a new booking absed on associations
+  # with user and parking objects, accomplished through build.
+  # The method redirects the user according to the failure or success of creation.
   # POST /bookings
-  # POST /bookings.json
   def create
-    # @user = User.find(params[:user_id])
-    # parking = Parking.find(params[:parking_id])
-    # @booking = @user.bookings.build(parking: parking, user: @user)
+
+    @parking = Parking.find(session[:parking_id])
     @booking = @user.bookings.build(parking: @parking)
     @booking.update(booking_params)
-
-
 
     respond_to do |format|
       if @booking.save
@@ -46,8 +50,9 @@ class BookingsController < ApplicationController
     end
   end
 
+  # Update method responsible for updating the related booking and redirecting the user to
+  # the correct path based on success or failure.
   # PATCH/PUT /bookings/1
-  # PATCH/PUT /bookings/1.json
   def update
     respond_to do |format|
       if @booking.update(booking_params)
@@ -60,8 +65,8 @@ class BookingsController < ApplicationController
     end
   end
 
+  # Delete method responsible for destroying a booking from database.
   # DELETE /bookings/1
-  # DELETE /bookings/1.json
   def destroy
     @booking.destroy
     respond_to do |format|
@@ -78,18 +83,13 @@ class BookingsController < ApplicationController
 
     def set_parking
       @parking = Parking.find(session[:parking_id])
-    rescue ActiveRecord::RecordNotFound
-      session[:parking_id] = params[:parking_id]
-      @parking = Parking.find(session[:parking_id])
-
     end
 
     def set_booking
       @booking = Booking.find(params[:id])
     end
 
-
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Only allowing required parameters to be passed
     def booking_params
       params.require(:booking).permit(:belongs_to, :belongs_to, :date)
     end
